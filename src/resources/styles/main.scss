@@ -1,0 +1,151 @@
+@use "variables" as *;
+
+@use "components/header" as *;
+@use "components/catedral" as *;
+@use "components/lonja" as *;
+@use "components/banys" as *;
+@use "components/castell" as *;
+@use "components/rutas" as *;
+@use "components/footer" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  margin: 0;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $background-color;
+}
+
+.intro {
+  padding: 2rem 1rem;
+  background-color: $catedral-bg-color;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: $font-size-title;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+    text-align: left;
+  }
+
+  p {
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $text-color;
+    text-align: left;
+  }
+
+  @include responsive(tablet) {
+    padding: 2rem 1rem;
+
+    &__image {
+      max-width: 400px;
+    }
+
+    &__description {
+      max-width: 400px;
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: 1rem;
+
+    &__image {
+      max-width: 300px;
+    }
+
+    &__description {
+      max-width: 300px;
+    }
+  }
+}
+
+.catedral, .castell, .lonja, .banys, .rutas {
+  padding: 4rem 2rem;
+  color: $text-color;
+  position: relative;
+  text-align: center;
+
+  &__title {
+    font-size: $font-size-title;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+
+  &__description {
+    font-size: $font-size-description;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: $button-color;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    text-align: center;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+
+  @include responsive(tablet) {
+    padding: 2rem 1rem;
+
+    &__image {
+      max-width: 500px;
+    }
+
+    &__description {
+      max-width: 500px;
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: 1rem;
+
+    &__image {
+      max-width: 300px;
+    }
+
+    &__description {
+      max-width: 300px;
+    }
+  }
+}
