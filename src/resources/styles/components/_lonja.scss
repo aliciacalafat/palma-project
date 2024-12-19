@@ -3,3 +3,40 @@
 .lonja {
   background-color: $lonja-bg-color;
 }
+
+.lonja__description {
+  font-size: $font-size-description;
+  line-height: 1.6;
+  color: $text-color;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+
+  &.lonja__images-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    img {
+      max-height: var(--image-height);
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .lonja__gif {
+      width: auto; 
+      height: var(--image-height);
+    }
+
+    .lonja__image {
+      width: auto;
+      height: var(--image-height);
+    }
+  }
+}
+
+.lonja__image {
+  --image-height: 200px;
+}

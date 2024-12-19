@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nosotros - Palma de Mallorca</title>
   <link rel="stylesheet" href="./resources/styles/main.scss">
+  <link rel="icon" type="image/svg+xml" href="./resources/images/favicon.png">
 </head>
 <body>
 
@@ -12,7 +13,14 @@
 
   <section id="catedral" class="catedral">
     <h2 class="catedral__title">Sobre Descubre Palma</h2>
-    <img src="./resources/images/rutas.png" alt="Explora Palma de Mallorca" class="catedral__image">
+    <svg id="animated-logo" width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" stroke="#FFCA28" stroke-width="5" fill="none">
+        <animate attributeName="r" from="0" to="45" dur="2s" fill="freeze" />
+      </circle>
+      <text x="50%" y="45%" text-anchor="middle" fill="#FF7F50" font-size="16" dy=".3em" font-weight="bold">Descubre</text>
+      <text x="50%" y="60%" text-anchor="middle" fill="#FF7F50" font-size="14" dy=".3em">Palma</text>
+    </svg>
+         
     <p class="catedral__description">
       <strong>Descubre Palma</strong> es una plataforma diseñada para quienes desean explorar la rica historia, cultura y naturaleza de Palma de Mallorca. 
       Nuestro objetivo es destacar los principales atractivos de la ciudad, ofreciendo una guía completa que incluye información detallada sobre monumentos icónicos como 
@@ -38,6 +46,7 @@
   </section>
 
   <include src="pages/footer.html"></include>
+  <script src="./resources/js/main.js"></script>
 
 </body>
 </html>

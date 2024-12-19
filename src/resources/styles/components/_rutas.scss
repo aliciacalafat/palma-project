@@ -3,3 +3,40 @@
 .rutas {
   background-color: $rutas-bg-color;
 }
+
+.rutas__description {
+  font-size: $font-size-description;
+  line-height: 1.6;
+  color: $text-color;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+
+  &.rutas__images-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    img {
+      max-height: var(--image-height);
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .rutas__gif {
+      width: auto; 
+      height: var(--image-height);
+    }
+
+    .rutas__image {
+      width: auto;
+      height: var(--image-height);
+    }
+  }
+}
+
+.rutas__image {
+  --image-height: 200px;
+}

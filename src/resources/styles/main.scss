@@ -29,25 +29,78 @@ body, html {
   background-color: $background-color;
 }
 
+.header__logo {
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+
+  svg {
+    animation: pulse 3s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.header__toggle {
+  margin-left: auto;
+
+  .dark-mode-toggle {
+    background-color: #FFCA28;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #FF7F50;
+    }
+  }
+}
+
 .intro {
-  padding: 2rem 1rem;
   background-color: $catedral-bg-color;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  text-align: center;
   margin: 0;
-  box-sizing: border-box;
 
   h1 {
     font-size: $font-size-title;
-    margin-bottom: 1rem;
     color: $secondary-color;
     text-align: left;
+    margin: 1rem 0;
   }
 
   p {
     font-size: $font-size-base;
-    line-height: 1.6;
     color: $text-color;
-    text-align: left;
+    margin: 0.5rem 0;
+  }
+
+  &__image {
+    width: 100%;
+    height:auto;
+    margin: 0;
+
+    img {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   @include responsive(tablet) {
@@ -148,4 +201,67 @@ body, html {
       max-width: 300px;
     }
   }
+}
+
+.dark-mode {
+  background-color: $dark-background-color-1;
+  color: $dark-text-color;
+
+  .header,
+  .footer {
+    background-color: $dark-background-color-2;
+    color: $dark-text-color;
+  }
+
+  h1, h2 {
+    color: $castell-bg-color;
+  }
+
+  main {
+    background-color: #6B6B6B;
+    color: $dark-text-color;
+  }
+
+  .intro,
+  .catedral,
+  .lonja,
+  .banys,
+  .castell,
+  .rutas {
+    background-color: #4F4F4F;
+    color: $dark-text-color;
+  }
+}
+
+.dark-mode-toggle {
+  background-color: $dark-mode-button-color !important;
+  color: $dark-mode-button-text-color !important;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $dark-mode-button-color-hover !important;
+  }
+
+}
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+picture {
+  display: block;
 }

@@ -11,6 +11,10 @@ $banys-bg-color: color.adjust($primary-color, $lightness: 50%);
 $castell-bg-color: color.adjust($secondary-color, $lightness: 40%);
 $rutas-bg-color: color.adjust($primary-color, $lightness: 50%);
 
+$dark-text-color: color.adjust($primary-color, $lightness: 80%);
+$dark-background-color-1: #6B6B6B;
+$dark-background-color-2: #4F4F4F;
+
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
@@ -20,6 +24,11 @@ $font-size-description: 1.1rem;
 
 $button-color: #ff7f50;
 $button-hover-color: #e76f3b;
+
+$dark-mode-button-color: #04508C;
+$dark-mode-button-color-hover: #0279d4;
+$dark-mode-button-text-color: #fff;
+
 $link-color: $text-color;
 $link-hover-color: #04508C;
 $link-underline-color: $link-hover-color;
