@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baños Árabes - Palma de Mallorca</title>
+  <title>Baños Árabes</title>
   <link rel="stylesheet" href="./resources/styles/main.scss">
 </head>
 <body>
   <include src="pages/header.html"></include>
   <section id="banys" class="banys">
     <h2 class="banys__title">Baños Árabes</h2>
-    <img src="./resources/images/banys.jpg" alt="Baños Árabes" class="banys__image">
+    <img src="./resources/images/banys.jpg" loading="lazy" alt="Baños Árabes" class="banys__image">
     <ul class="banys__description">
       <li>Construidos en el siglo X durante la dominación islámica.</li>
       <li>Estructura central con columnas y arcos de herradura.</li>
@@ -27,8 +27,8 @@
       lo que refleja la mezcla cultural de la época. Su cúpula perforada permitía la entrada de luz y la ventilación, creando un ambiente ideal para la relajación.
     </p>
     <div class="banys__description banys__images-wrapper">
-      <img src="./resources/images/banysGif.gif" alt="Animación de la banys" class="banys__image">
-      <img src="./resources/images/banys2.jpg" alt="Vista de la banys" class="banys__image">
+      <img src="./resources/images/banysGif.gif" loading="lazy" alt="Animación de la banys" class="banys__image">
+      <img src="./resources/images/banys2.jpg" loading="lazy" alt="Vista de la banys" class="banys__image">
     </div>  
     <p class="banys__description">
       Rodeados por un jardín tranquilo y exuberante, los Baños Árabes ofrecen un espacio perfecto para desconectar del bullicio de la ciudad. 
@@ -40,6 +40,6 @@
     </p>
   </section>
   <include src="pages/footer.html"></include>
-  <script src="./resources/js/main.js"></script>
+  <script defer="defer" src="./resources/js/main.js"></script>
 </body>
 </html>

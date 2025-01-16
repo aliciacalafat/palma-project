@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catedral-Basílica de Santa María - Palma de Mallorca</title>
+  <title>Catedral-Basílica de Santa María</title>
   <link rel="stylesheet" href="./resources/styles/main.scss">
 </head>
 <body>
   <include src="pages/header.html"></include>
   <section id="catedral" class="catedral">
     <h2 class="catedral__title">Catedral-Basílica de Santa María</h2>
-    <img src="./resources/images/catedral.png" alt="Catedral de Palma" class="catedral__image">
+    <picture>
+      <source srcset="./resources/images/catedral600px.png" media="(max-width: 600px)">
+      <source srcset="./resources/images/catedral1200px.png" media="(max-width: 1200px)">
+      <source srcset="./resources/images/catedral2000px.png" media="(min-width: 1201px)">
+      <img src="./resources/images/catedral2000px.png" loading="lazy" alt="Catedral de Palma" class="catedral__image">
+    </picture>
     <ul class="catedral__description">
       <li>Estilo arquitectónico gótico levantino.</li>
       <li>Rosetón central con más de 13 metros de diámetro.</li>
@@ -28,8 +33,8 @@
       Este equilibrio entre lo tradicional y lo contemporáneo la convierte en un lugar único.
     </p>
     <div class="catedral__description catedral__images-wrapper">
-      <img src="./resources/images/catedralGif.gif" alt="Animación de la Catedral de Palma" class="catedral__image">
-      <img src="./resources/images/catedral2.jpg" alt="Vista de la Catedral de Palma" class="catedral__image">
+      <img src="./resources/images/catedralGif.gif" loading="lazy" alt="Animación de la Catedral de Palma" class="catedral__image">
+      <img src="./resources/images/catedral2.jpg" loading="lazy" alt="Vista de la Catedral de Palma" class="catedral__image">
     </div>        
     <p class="catedral__description">
       Además de su arquitectura impresionante, la Catedral-Basílica de Santa María es un importante centro espiritual y cultural en Mallorca. 
@@ -42,6 +47,6 @@
     </p>
   </section>
   <include src="pages/footer.html"></include>
-  <script src="./resources/js/main.js"></script>
+  <script defer="defer" src="./resources/js/main.js"></script>
 </body>
 </html>

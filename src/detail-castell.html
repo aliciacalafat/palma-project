@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Castillo de Bellver - Palma de Mallorca</title>
+  <title>Castillo de Bellver</title>
   <link rel="stylesheet" href="./resources/styles/main.scss">
 </head>
 <body>
   <include src="pages/header.html"></include>
   <section id="castell" class="castell">
     <h2 class="castell__title">Castillo de Bellver</h2>
-    <img src="./resources/images/castell.png" alt="Castillo de Bellver" class="castell__image">
+    <img src="./resources/images/castell.png" loading="lazy" alt="Castillo de Bellver" class="castell__image">
     <ul class="castell__description">
       <li>Diseño único con planta circular, raro en la arquitectura europea.</li>
       <li>Construido en el siglo XIV bajo el reinado de Jaime II de Mallorca.</li>
@@ -27,8 +27,8 @@
       incluidos períodos como fortaleza militar y prisión. Su diseño incluye torres redondas conectadas por un patio central, lo que lo hace destacar entre otras fortalezas medievales.
     </p>
     <div class="castell__description castell__images-wrapper">
-      <img src="./resources/images/castellGif.gif" alt="Animación de castell" class="castell__image">
-      <img src="./resources/images/castell2.jpg" alt="Vista de castell" class="castell__image">
+      <img src="./resources/images/castellGif.gif" loading="lazy" alt="Animación de castell" class="castell__image">
+      <img src="./resources/images/castell2.jpg" loading="lazy" alt="Vista de castell" class="castell__image">
     </div> 
     <p class="castell__description">
       Rodeado por un frondoso bosque, el Castillo de Bellver es un lugar perfecto para pasear y disfrutar de la naturaleza. 
@@ -40,6 +40,6 @@
     </p>
   </section>
   <include src="pages/footer.html"></include>
-  <script src="./resources/js/main.js"></script>
+  <script defer="defer" src="./resources/js/main.js"></script>
 </body>
 </html>

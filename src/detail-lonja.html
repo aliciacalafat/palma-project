@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lonja de Palma - Palma de Mallorca</title>
+  <title>Lonja de Palma</title>
   <link rel="stylesheet" href="./resources/styles/main.scss">
 </head>
 <body>
   <include src="pages/header.html"></include>
   <section id="lonja" class="lonja">
     <h2 class="lonja__title">Lonja de Palma</h2>
-    <img src="./resources/images/lonja.jpg" alt="Lonja de Palma" class="lonja__image">
+    <img 
+    src="./resources/images/lonja.jpg" 
+    srcset="
+      ./resources/images/lonja-1x.jpg 1x,
+      ./resources/images/lonja-2x.jpg 2x,
+      ./resources/images/lonja-3x.jpg 3x" 
+    alt="Lonja de Palma"
+    loading="lazy" 
+    class="lonja__image">
     <ul class="lonja__description">
       <li>Construida en el siglo XV como sede del Colegio de Mercaderes.</li>
       <li>Diseño gótico con columnas en espiral y techos abovedados.</li>
@@ -27,8 +35,8 @@
       Su fachada, decorada con detalles intrincados, es un testimonio de la prosperidad comercial que Palma alcanzó durante el periodo medieval.
     </p>
     <div class="lonja__description lonja__images-wrapper">
-      <img src="./resources/images/lonjaGif.gif" alt="Animación de lonja" class="lonja__image">
-      <img src="./resources/images/lonja2.jpg" alt="Vista de lonja" class="lonja__image">
+      <img src="./resources/images/lonjaGif.gif" loading="lazy" alt="Animación de lonja" class="lonja__image">
+      <img src="./resources/images/lonja2.jpg" loading="lazy" alt="Vista de lonja" class="lonja__image">
     </div> 
     <p class="lonja__description">
       En su interior, la simetría y elegancia de las columnas en espiral evocan la imagen de un bosque de piedra, creando un ambiente sereno y majestuoso. 
@@ -40,6 +48,6 @@
     </p>
   </section>
   <include src="pages/footer.html"></include>
-  <script src="./resources/js/main.js"></script>
+  <script defer="defer" src="./resources/js/main.js"></script>
 </body>
 </html>
